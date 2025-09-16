@@ -1,3 +1,5 @@
+<div dir="ltr">
+
 # 📊 Telco Customer Churn Prediction  
 
 <p align="center">
@@ -9,39 +11,39 @@
 ---
 
 ## 📌 Overview  
-Customer churn (ترك العملاء للشركة) يمثل تحديًا كبيرًا لشركات الاتصالات.  
-في هذا المشروع تم استخدام **بيانات Telco Customer Churn** لبناء نماذج تعلم آلي تساعد على:  
-- التنبؤ بمدى احتمالية مغادرة العميل.  
-- فهم **العوامل الأكثر تأثيرًا** على churn.  
-- تقديم رؤى تساعد الشركات على تحسين خدمة العملاء وتقليل نسبة المغادرين.  
+Customer churn is a major challenge for telecom companies.  
+In this project, the **Telco Customer Churn dataset** was used to build machine learning models that:  
+- Predict the likelihood of a customer leaving.  
+- Identify **key factors influencing churn**.  
+- Provide insights to help businesses improve customer retention.  
 
 ---
 
 ## 📂 Project Workflow  
 🔹 **1. Data Understanding & Cleaning**  
-- التعامل مع القيم المفقودة.  
-- تحويل المتغيرات الفئوية (Categorical) إلى متغيرات رقمية.  
-- استخراج ميزات جديدة مثل `Tenure Groups`.  
+- Handled missing values.  
+- Converted categorical variables into numerical features.  
+- Engineered new features such as `Tenure Groups`.  
 
 🔹 **2. Exploratory Data Analysis (EDA)**  
-- تحليل توزيعات العملاء حسب العقود، الفواتير الشهرية، مدة الخدمة.  
-- دراسة ارتباط السمات بسلوك churn.  
+- Analyzed customer distribution by contract type, monthly charges, and tenure.  
+- Studied the relationship between features and churn behavior.  
 
 🔹 **3. Modeling**  
-- مقارنة عدة نماذج:  
+- Compared multiple models:  
   - Logistic Regression  
   - Random Forest  
   - XGBoost  
-- استخدام **Cross-Validation** للحد من الـ Overfitting.  
-- ضبط المعاملات (Hyperparameter Tuning).  
+- Used **Cross-Validation** to reduce overfitting.  
+- Applied **Hyperparameter Tuning** for better performance.  
 
 🔹 **4. Evaluation**  
-- مقاييس الأداء: Accuracy, Precision, Recall, F1-score.  
-- رسم منحنيات ROC و Precision-Recall.  
-- تحليل **Feature Importance**.  
+- Performance metrics: Accuracy, Precision, Recall, F1-score.  
+- Visualizations: ROC Curve, Precision-Recall Curve.  
+- Feature importance analysis to understand driver factors.  
 
 🔹 **5. Deployment (Future Work)**  
-- تجهيز النموذج كـ API أو واجهة تفاعلية باستخدام **Streamlit**.  
+- Prepare the best model for deployment as an API or an interactive app using **Streamlit**.  
 
 ---
 
@@ -52,33 +54,28 @@ Customer churn (ترك العملاء للشركة) يمثل تحديًا كبي
 
 ---
 
+## 📈 Key Insights  
+- **Best Model:** XGBoost achieved the highest F1-score.  
+- **Top Features Influencing Churn:**  
+  - Contract Type  
+  - Monthly Charges  
+  - Tenure  
 
- 
+👉 Businesses should focus on customers with **short-term contracts and high monthly charges** to reduce churn.  
 
-أفضل نموذج حقق F1-score أعلى كان XGBoost.
+---
 
-السمات الأكثر تأثيرًا على churn:
+## 🔮 Future Improvements  
+- Apply advanced balancing techniques such as **SMOTE**.  
+- Experiment with other models like **LightGBM** and **CatBoost**.  
+- Deploy the model as an interactive app (Streamlit or Flask).  
+- Add interactive dashboards using **Tableau** or **Power BI**.  
 
-نوع العقد (Contract Type)
+---
 
-قيمة الفاتورة الشهرية (MonthlyCharges)
+## 👤 Author  
+**Ahmed Hamdy**  
 
-مدة الخدمة (Tenure)
-
-📈 الشركات يمكنها التركيز على العملاء أصحاب العقود القصيرة والفواتير العالية لتقليل churn.
-
-🔮 Future Improvements
-
-استخدام تقنيات موازنة البيانات مثل SMOTE.
-
-تجربة نماذج أخرى مثل LightGBM & CatBoost.
-
-نشر النموذج كـ تطبيق تفاعلي (Streamlit أو Flask).
-
-إضافة تقارير تفاعلية باستخدام Tableau أو PowerBI.
-
-👤 Author
-
-Ahmed Hamdy
+</div>
 
 🔗 GitHub
