@@ -79,15 +79,19 @@ fig.show()
 fig = px.histogram(data, x="Churn", color="PaymentMethod", title="<b>Customer Payment Method distribution w.r.t. Churn</b>")
 fig.update_layout(width=700, height=500, bargap=0.1)
 fig.show()
-sns.set_context("paper",font_scale=1.1)
-ax = sns.kdeplot(data.MonthlyCharges[(data["Churn"] == 'No') ],
-                color="Red", shade = True);
-ax = sns.kdeplot(data.MonthlyCharges[(data["Churn"] == 'Yes') ],
-                ax =ax, color="Blue", shade= True);
-ax.legend(["Not Churn","Churn"],loc='upper right');
-ax.set_ylabel('Density');
-ax.set_xlabel('Monthly Charges');
-ax.set_title('Distribution of monthly charges by churn');
+sns.set_context("paper", font_scale=1.1)
+
+sns.kdeplot(
+    data=data,
+    x="MonthlyCharges",
+    hue="Churn",
+    fill=True,
+    alpha=0.5
+)
+
+plt.title('Distribution of monthly charges by churn')
+plt.show()
+
 
 z_scores = np.abs(stats.zscore(data['MonthlyCharges']))
 outliers = data[z_scores > 3]
